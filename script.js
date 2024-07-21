@@ -10,8 +10,7 @@ search.addEventListener('click', ()=> {
 
   if (city =='')
     return;
-  // const weather2=fetch(`https://api.openweathermap.org/data/2.5/weather?q=bareilly&appid=${APIKey}`).then(response => response.json()).then(json=>);
-    // console.log(weather2,"hello")
+
   const weather=fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`).then(response => response.json()).then(json => {
     console.log(json)
     const image =document.querySelector('.weather-box img');
